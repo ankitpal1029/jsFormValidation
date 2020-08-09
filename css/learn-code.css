@@ -221,13 +221,14 @@ small {
   position: absolute;
   left: 50%;
   top: 105%;
-  width: 40%;
+  width: 50%;
   color: #e74c3c;
 }
 
 .error-box {
   border-color: #e74c3c;
   visibility: visible;
+  color: #e74c3c;
 }
 
 @media (min-width: 600px) {
@@ -245,13 +246,14 @@ small {
 
   small {
     position: absolute;
-    left: 90%;
-    width: 40%;
+    left: 85%;
+    width: 50%;
     color: #e74c3c;
   }
 
   .error-box {
     border-color: #e74c3c;
     visibility: visible;
+    color: #e74c3c;
   }
 }

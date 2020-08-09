@@ -24,25 +24,25 @@ var form = {
     const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     if (userName.value.trim() === "") {
-      this.setErrorFor(userName, "User name cannot be blank", 0);
+      this.setErrorFor(userName, "User name cannot be empty", 0);
     } else {
       this.setSuccessFor(userName, 0);
     }
 
     if (lastName.value.trim() === "") {
-      this.setErrorFor(lastName, "Last name cannot be blank", 1);
+      this.setErrorFor(lastName, "Last name cannot be empty", 1);
     } else {
       this.setSuccessFor(lastName, 1);
     }
 
     if (email.value.trim() === "" || !emailRegExp.test(email.value.trim())) {
-      this.setErrorFor(email, "Email entered not valid", 2);
+      this.setErrorFor(email, "Looks like this is not an email", 2);
     } else {
       this.setSuccessFor(email, 2);
     }
 
     if (password.value.trim() === "") {
-      this.setErrorFor(password, "Password cannot be blank", 3);
+      this.setErrorFor(password, "Password cannot be empty", 3);
     } else {
       this.setSuccessFor(password, 3);
     }
@@ -55,9 +55,8 @@ var form = {
     const changeImage = formControl.querySelector("i");
     small.innerText = message;
     input.className = "error-box";
-
     changeImage.className = "exclamation";
-    console.log(input);
+    console.log(formControl);
   },
 
   setSuccessFor: function (input, index) {
